@@ -1,0 +1,9 @@
+echo Welcome
+echo please type in the name of your .tar.gz file
+read $name
+
+tar -xzf "$name".tar.gz
+cd archive-name
+./configure
+make
+sudo make install
