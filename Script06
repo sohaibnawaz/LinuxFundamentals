@@ -1,0 +1,14 @@
+read -a number
+
+for i in "${number[@]}"
+do 
+	if (( $i % 5 == 0 ))        
+	then
+		echo "Buzz"
+	fi
+	if (( $i % 3 == 0 ))
+	then
+		echo "Fizz"
+fi
+done
+

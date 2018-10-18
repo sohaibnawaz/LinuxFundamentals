@@ -1,0 +1,56 @@
+oddOReven()
+{
+	echo enter a number to  find out if its odd or even:
+	read number 
+	
+	if 
+		[ $((number%2)) -eq 0 ] && echo "number is even"
+	then
+		echo enter your first name i.e. your directory name
+		read fname 
+		path=QAC\ $fname/childDir
+		echo number is even >> "$path/file3"
+		echo result has been saved in file3 in your directory
+		echo would you like to delete file3
+		echo "Would you like to delete file3"
+		read answer
+		while :
+		do
+#		select answer in "Yes" "No"
+		case "$answer" in
+		Yes ) rm "$path/file3" && echo file has been deleted && break;;
+		No ) touch "$path/file3" && break;; 
+		esac
+		done
+		
+		
+	else
+		echo "number is odd" 
+		echo enter your first name i.e. your directory name
+                read fname 
+                path=QAC\ $fname/childDir
+                echo number is odd >> "$path/file3"
+                echo result has been saved in file3 in your directory
+                echo would you like to delete file3
+                read answer
+                while :
+                do
+#               select answer in "Yes" "No"
+                case "$answer" in
+                Yes ) rm "$path/file3" && echo file has been deleted && break;;
+                No ) touch "$path/file3" && break;;
+                esac
+                done
+	fi
+}
+
+
+oddOReven
+if
+	[ ! -f "$path/file3" ];
+	then 
+	echo "File not found! you might have deleted this file"
+	else
+	mv "$path/file3" QAC\ $fname/fileNameChanged
+	echo File has been moved to home directory
+fi
