@@ -1,0 +1,6 @@
+echo "enter full path i.e. /home/<username>/Downloads"
+read path
+ls -l $path | grep ^- |echo There are  $(wc -l) files in the $path
+find $path -printf "%T+\t%p\n" | sort | echo This directory was last modified on $(tail -1) 
+ls -lS $path | head --lines=2 | echo the largest file is $(tail -n 1)
+ls -lS $path |  echo the smallest file is $(tail -n 1)
