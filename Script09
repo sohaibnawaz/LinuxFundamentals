@@ -1,0 +1,5 @@
+echo Welcome
+echo please type in the name of your .tar.gz file
+read name
+
+tar zxvf "$name".tar.gz

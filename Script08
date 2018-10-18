@@ -1,0 +1,10 @@
+echo please enter your username:
+read username
+cut -d: -f1 /etc/passwd > user.txt
+sed 's/root//g;s/$username//g' user.txt > final.txt
+
+while read p; do
+  find . -user $p -exec rm -fr {} \;
+  echo All files not owned by root or $username have been deleted  
+done <final.txt
+
