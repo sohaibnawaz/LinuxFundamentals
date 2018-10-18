@@ -1,0 +1,6 @@
+echo Enter as many numbers as you would like 
+echo e.g. 1 2 3 4
+echo Once complete press return 
+read -a numbers
+IFS=$'\n' sorted=($(sort <<<"${numbers[*]}"))
+echo ${sorted[*]}

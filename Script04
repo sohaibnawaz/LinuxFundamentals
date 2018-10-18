@@ -1,0 +1,7 @@
+echo all active processes:
+ps -A
+echo 
+echo Please enter the process ID you would like to stop 
+read Pid
+kill -9 $Pid
+
