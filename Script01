@@ -1,0 +1,31 @@
+echo Please enter your first name:
+read fname
+mkdir QAC\ $fname
+echo Directory created: QAC $fname
+cd QAC\ $fname
+
+touch file1 file2 file3
+
+echo enter text for file1
+read text 
+echo $text >>  file1
+echo text saved to file1
+
+echo enter text for file2 
+read text 
+echo $text >>  file2
+echo text saved to file2
+
+echo enter text for file3 
+read text 
+echo $text >>  file3
+echo text saved to file3
+
+mkdir childDir
+echo chidDir has been created!
+echo moving file1 file2 file3...
+mv file1 childDir/file1
+mv file2 childDir/file2
+mv file3 childDir/file3
+echo files successfully moved to childDir
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo -n "Enter directory name :"
+read guess
+while [ "$guess" -d $guess]; do
+#test -d $guess;
+
+#if true;
+#then
+echo "Directory already exists" ;
+break
+else
+echo "Directory"
+
+#fi
+
+done

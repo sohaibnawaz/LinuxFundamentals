@@ -1,0 +1,8 @@
+echo userID they are in Groups they are in 
+echo please enter a username:
+read username
+echo "your ID is:"
+id -u $username
+echo You are in the following groups:
+groups $username
+
